@@ -96,4 +96,4 @@ sudo chmod o+w $LOGFILE
 
 
 #docker-compose pull
-docker-compose up -d
+sudo docker-compose up -d
