@@ -44,7 +44,7 @@ if [ -f "$ACMEFile" ]; then
 else
     touch $ACMEFile
 fi
-
+chmod 600 ACMEFile
 DIR=./letsencrypt
 #sudo chown 1883:1883 $DIR -R
 
