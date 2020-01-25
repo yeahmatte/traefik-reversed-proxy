@@ -1,0 +1,17 @@
+version: "3.3"
+
+services:
+
+  traefik:
+    image: traefik:latest
+    ports:
+      - 80:80
+      - 443:443
+      - 8080:8080
+    volumes:
+      - "./letsencrypt:/letsencrypt"
+      - "./socket/docker.sock:/var/run/docker.sock"
+      - "./config/traefik.toml:/etc/traefik/traefik.toml"
+      - "./config/rules.toml:/etc/traefik/rules.toml"
+      - "./log/traefik.log:/log/traefik.log"
+      - "./log/access.log:/log/access.log"
