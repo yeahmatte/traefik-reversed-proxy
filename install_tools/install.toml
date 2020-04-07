@@ -1,0 +1,8 @@
+[traefik]
+	file_path = './config/traefik.toml'
+	file_id = '1HOf6pZrRKeRzo-LCRxCCfQ66YxXMrKUD'
+
+[rules]
+	file_path = './config/rules.toml'
+	file_id = '1cJoVWIa5VdnZRxnoSBB0tQzM1CtkPGAB'
+    
