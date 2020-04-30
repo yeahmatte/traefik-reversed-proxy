@@ -8,7 +8,7 @@ else
     echo "Config directory created"
 fi
 
-python install_tools/start.py
+python3 install_tools/start.py
 
 CONFFILE=./config/traefik.toml
 if [ -f "$CONFFILE" ]; then

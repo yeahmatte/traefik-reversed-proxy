@@ -2,6 +2,6 @@
 
 git pull
 
-pip install --upgrade -r ./requirements/python/requirements.txt
+pip3 install --upgrade -r ./requirements/python/requirements.txt
 
-python install_tools/install.py
+python3 install_tools/install.py
