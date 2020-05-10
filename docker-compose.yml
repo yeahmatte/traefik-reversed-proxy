@@ -17,7 +17,8 @@ services:
       - "./log/access.log:/log/access.log"
     restart: unless-stopped
   certdumper:
-    image: svendowideit/traefik-certdumper:latest
-    container_name: traefik_certdumper
+    image: ldez/traefik-certs-dumper:latest
+    command: "file --watch --domain-subdir=true --version v2"
     volumes:
-    - ./letsencrypt:/traefik
+      - ./letsencrypt/acme.json:/acme.json:ro
+      - ./certificates:/dump:rw
