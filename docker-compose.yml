@@ -22,3 +22,5 @@ services:
     volumes:
     - ./letsencrypt:/traefik:ro
     - ./certificates:/output:rw
+    environment:
+    - DOMAIN=YOUR_DOMAIN_HERE
