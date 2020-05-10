@@ -1,3 +1,3 @@
 #!/bin/sh
 
-dumpcerts.sh ./letsencrypt/acme.json ./certificates/
+./dumpcerts.sh ./letsencrypt/acme.json ./certificates/
