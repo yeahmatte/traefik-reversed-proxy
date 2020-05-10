@@ -17,10 +17,7 @@ services:
       - "./log/access.log:/log/access.log"
     restart: unless-stopped
   certdumper:
-    image: humenius/traefik-certs-dumper:latest
+    image: svendowideit/traefik-certdumper:latest
     container_name: traefik_certdumper
     volumes:
-    - ./letsencrypt:/traefik:ro
-    - ./certificates:/output:rw
-    environment:
-    - DOMAIN=YOUR_DOMAIN_HERE
+    - ./letsencrypt:/traefik
