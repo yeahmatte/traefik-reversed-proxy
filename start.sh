@@ -8,6 +8,15 @@ else
     echo "Config directory created"
 fi
 
+FILE=./certificates
+if [ -d "$FILE" ]; then
+    echo "Cert directory exists"
+else
+    mkdir $FILE
+    echo "Cert directory created"
+fi
+
+
 python3 install_tools/start.py
 
 CONFFILE=./config/traefik.toml
