@@ -18,7 +18,7 @@ services:
     restart: unless-stopped
   certdumper:
     image: ldez/traefik-certs-dumper:latest
-    command: "file --watch --domain-subdir=true --version v2"
+    command: "file --watch --domain-subdir=true --version v2 --crt-ext=.pem --key-ext=.pem --crt-name=fullchain --key-name=privkey"
     volumes:
       - ./letsencrypt/acme.json:/acme.json:ro
       - ./certificates:/dump:rw
